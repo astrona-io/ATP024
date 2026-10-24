@@ -4,12 +4,12 @@ An Astrona **training path**: a course track that groups training series
 (`ATSxxx`) as its domains. Each stage in `path.yaml` is one domain and points
 at the repository that teaches it. There is no official Tekton certification
 exam, so the domains and weights are Astrona's own and `examPreparation` is
-off. Tekton is a graduated project of the CD Foundation (Continuous Delivery
-Foundation), not of the CNCF.
+off. Tekton was a graduated project of the CD Foundation (Continuous Delivery
+Foundation) and moved to the CNCF as an incubating project on 13 March 2026.
 
 | Stage | Domain | Weight | Content | Status |
 | --- | --- | --- | --- | --- |
-| STG001 | Fundamentals, Architecture & tkn CLI | 10 % | [ATS124](https://github.com/astrona-io/ATS124) | Draft, being written |
+| STG001 | Fundamentals, Architecture & tkn CLI | 10 % | [ATS124](https://github.com/astrona-io/ATS124) | Draft, written, not yet run |
 | STG002 | Tasks, Steps & Workspaces | 20 % | [ATS125](https://github.com/astrona-io/ATS125) | Planned |
 | STG003 | Pipelines, Task Graphs & Custom Tasks | 25 % | [ATS126](https://github.com/astrona-io/ATS126) | Planned |
 | STG004 | Triggers, Interceptors & Event-Driven CI | 15 % | [ATS127](https://github.com/astrona-io/ATS127) | Planned |

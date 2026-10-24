@@ -30,9 +30,10 @@ spec:
   audience: "Kubernetes and platform engineers who build CI/CD pipelines that run inside clusters."
   difficulty: "Intermediate"
 
-  # There is no official Tekton certification exam. Tekton is a graduated
-  # project of the CD Foundation, not the CNCF. The domains and their weights
-  # below are Astrona's own.
+  # There is no official Tekton certification exam. Tekton was a graduated
+  # project of the CD Foundation and moved to the CNCF as an incubating
+  # project on 13 March 2026. The domains and their weights below are
+  # Astrona's own.
   examPreparation:
     enabled: false
 
