@@ -1,0 +1,118 @@
+apiVersion: content.astrona.io/v1alpha1
+kind: TrainingPath
+metadata:
+  id: ATP024
+  slug: tekton
+  title: "Tekton"
+  description: >-
+    The Tekton track: one course per domain — Tekton's architecture and the
+    tkn command-line tool, Tasks, Steps and Workspaces, Pipelines and their
+    task graphs, event-driven runs with Tekton Triggers, Pipelines-as-Code,
+    and supply chain security with Tekton Chains plus day-to-day operations —
+    with readings, ungraded playgrounds and graded hands-on labs that run on
+    your own computer with the Astrona CLI.
+  version: "0.1.0"
+  language: "en"
+  maturity: draft
+  authors:
+    - name: "Paris Nakita Kejser"
+      email: "paris@astrona.io"
+      company: "Astrona.io"
+  tags:
+    - "Tekton"
+    - "CI/CD"
+    - "Continuous Integration"
+    - "Kubernetes"
+    - "CD Foundation"
+  license: "Apache-2.0"
+
+spec:
+  audience: "Kubernetes and platform engineers who build CI/CD pipelines that run inside clusters."
+  difficulty: "Intermediate"
+
+  # There is no official Tekton certification exam. Tekton is a graduated
+  # project of the CD Foundation, not the CNCF. The domains and their weights
+  # below are Astrona's own.
+  examPreparation:
+    enabled: false
+
+  prerequisites:
+    - "Working knowledge of Kubernetes: pods, deployments, services, secrets, volumes and kubectl."
+    - "Comfort with containers and Git from the terminal."
+    - "A computer that can run the Astrona CLI with Docker or Podman, for the labs."
+
+  learningOutcomes:
+    - "Explain Tekton's Kubernetes-native execution model, install Tekton Pipelines and the Dashboard, and drive runs with the tkn CLI."
+    - "Write Tasks with steps, parameters, results and Workspaces, and build and push container images from them."
+    - "Compose Pipelines as task graphs with runAfter, results, when expressions, finally tasks, retries, timeouts and matrix fan-out."
+    - "Start PipelineRuns from events with EventListeners, TriggerBindings, TriggerTemplates and interceptors."
+    - "Keep pipeline definitions next to the code with Pipelines-as-Code and report results back to pull requests."
+    - "Sign and attest build output with Tekton Chains, and operate Tekton with the Operator, pruning and Prometheus metrics."
+
+  # One stage per domain. Weights follow the path's own domain plan.
+  stages:
+    - id: "ATP024-STG001"
+      title: "Fundamentals, Architecture & tkn CLI"
+      description: "What Tekton is, its Kubernetes-native execution model (custom resources, one pod per TaskRun, one container per step), the Tekton components, installing Pipelines and the Dashboard, and the tkn CLI."
+      weight: 10
+      maturity: draft
+      content:
+        - ref: ATS124
+          repository: "https://github.com/astrona-io/ATS124"
+          path: "."
+          version: "0.1.0"
+
+    - id: "ATP024-STG002"
+      title: "Tasks, Steps & Workspaces"
+      description: "The anatomy of a Task, the TaskRun lifecycle, parameters and results, Workspaces backed by PersistentVolumeClaims, ConfigMaps, Secrets and emptyDir, step termination and error handling."
+      weight: 20
+      maturity: draft
+      content:
+        - ref: ATS125
+          repository: "https://github.com/astrona-io/ATS125"
+          path: "."
+          version: "0.1.0"
+
+    - id: "ATP024-STG003"
+      title: "Pipelines, Task Graphs & Custom Tasks"
+      description: "Pipelines and PipelineRuns, ordering with runAfter and results, when expressions, finally tasks, timeouts, retries, matrix fan-out and custom tasks."
+      weight: 25
+      maturity: draft
+      content:
+        - ref: ATS126
+          repository: "https://github.com/astrona-io/ATS126"
+          path: "."
+          version: "0.1.0"
+
+    - id: "ATP024-STG004"
+      title: "Triggers, Interceptors & Event-Driven CI"
+      description: "Tekton Triggers: EventListener, Trigger, TriggerBinding, ClusterTriggerBinding and TriggerTemplate, and interceptors for GitHub, GitLab, Bitbucket, CEL filtering and webhook secret checks."
+      weight: 15
+      maturity: draft
+      content:
+        - ref: ATS127
+          repository: "https://github.com/astrona-io/ATS127"
+          path: "."
+          version: "0.1.0"
+
+    - id: "ATP024-STG005"
+      title: "Pipelines-as-Code & Git-Native CI"
+      description: "Pipelines-as-Code: the .tekton directory, GitHub App and webhook integration, repository scoping, pull request status reporting, concurrency and branch matching."
+      weight: 15
+      maturity: draft
+      content:
+        - ref: ATS128
+          repository: "https://github.com/astrona-io/ATS128"
+          path: "."
+          version: "0.1.0"
+
+    - id: "ATP024-STG006"
+      title: "Supply Chain Security With Chains & Operations"
+      description: "Tekton Chains for signed SLSA provenance with Sigstore, the Tekton Operator, pruning of old TaskRuns and PipelineRuns, and Prometheus monitoring."
+      weight: 15
+      maturity: draft
+      content:
+        - ref: ATS129
+          repository: "https://github.com/astrona-io/ATS129"
+          path: "."
+          version: "0.1.0"
