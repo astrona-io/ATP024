@@ -24,5 +24,4 @@ and Pruner v0.4.4. The source for every fact is the Tekton documentation,
 The site picks it up through [astrona-content](https://github.com/astrona-io/astrona-content):
 a file in `courses/` that points at this repository, and the content sync
 builds the course — one section per stage, with the readings, playgrounds and
-labs each stage repository lists in its `astrona.yaml`. That course file does
-not exist yet; add it when the first stage is ready to show.
+labs each stage repository lists in its `astrona.yaml`. The course file is `courses/tekton.yaml` (draft).
